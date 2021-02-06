@@ -1,0 +1,33 @@
+<!-- Alterar cor de elemento -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Entradas</title>
+  </head>
+
+  <body>
+    <input
+      type="text"
+      placeholder="Informe um texto"
+      id="valor"
+      onblur="minhaFuncao()"
+    />
+
+    <div id="resultado"></div>
+
+    <script>
+      document.getElementById('valor').focus();
+
+      function minhaFuncao() {
+        var valor = document.getElementById('valor').value;
+        if (valor) {
+          document.getElementById('resultado').innerHTML = valor;
+          document.getElementById('resultado').style.color = 'green';
+        } else {
+          document.getElementById('resultado').innerHTML = "Campo vazio!";
+          document.getElementById('resultado').style.color = 'red';
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!-- Usando innerHTML getElementByName -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>getElementByName</title>
+  </head>
+
+  <body>
+    <input type="text" placeholder="Informe um texto" id="valor" name="texto">
+    <input type="text" placeholder="Informe um texto" name="texto">
+
+    <button onclick="minhaFuncao()">Clique me</button>
+
+    <div id="resultado"></div>
+
+    <script>
+
+      function minhaFuncao() {
+
+        var valor = document.getElementById('valor').value;
+        var texto1 = document.getElementsByName('texto')[0].value;
+        var texto2 = document.getElementsByName('texto')[1].value;
+
+        var valor = document.getElementById('resultado').innerHTML = texto1+" - "+texto2;
+        
+      }
+    </script>
+  </body>
+</html>

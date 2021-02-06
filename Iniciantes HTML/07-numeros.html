@@ -1,28 +1,40 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Entradas</title>
-    </head>
-    <body>
 
-        <input type="text" placeholder="Informe o numero 1" id="numero1">
-        <input type="text" placeholder="Informe o numero 2" id="numero2">
-        <button onclick="minhaFuncao()">clique me</button>
+<head>
+    <meta charset="UTF-8">
+    <title>Entradas</title>
+</head>
 
-        <script>
+<body>
 
-            function minhaFuncao(){
+    <input type="text" placeholder="Informe o numero 1" id="numero1">
+    <input type="text" placeholder="Informe o numero 2" id="numero2">
+    <button onclick="minhaFuncao()">clique me</button>
 
-                var numero1 = document.querySelector('#numero1').value;
-                var numero2 = document.querySelector('#numero2').value;
-                
-                
-//aqui pode ser usado qualquer uma das duas funções
-                //alert("Numero 1: "+numero1+ " - Numero 2: "+numero2);
-                alert(`Numero 1: ${numero1} - Numero 2: ${numero2}`);
-            }
+    <script>
 
-        </script>
+        function minhaFuncao() {
+            
+            //aqui pode ser usado qualquer uma das funções
 
-    </body>
+            //#OPÇÃO 01
+            // var numero1 = document.querySelector('#numero1').value;
+            // var numero2 = document.querySelector('#numero2').value;
+
+            //#OPÇÃO 02
+            var numero1 = parseInt(document.querySelector('#numero1').value);
+            var numero2 = parseInt(document.querySelector('#numero2').value);
+
+
+            //aqui pode ser usado qualquer uma das funções
+            //#OPÇÃO 01
+            //alert("Numero 1: "+numero1+ " - Numero 2: "+numero2 " - Resultado: "+(numero1 + numero2));
+
+            //#OPÇÃO 02
+            alert(`Numero 1: ${numero1} - Numero 2: ${numero2} - Resultado: ${numero1 + numero2}`);
+        }
+
+    </script>
+</body>
+
 </html>
